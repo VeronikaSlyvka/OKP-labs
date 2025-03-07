@@ -1,7 +1,7 @@
 body {
     background-color: #ffffff;
     font-size: 16px;
-    font-family: Arial, sans-serif !important;
+    font-family: Arial, sans-serif;
     text-decoration: none;
     line-height: 1;
     text-align: left;
@@ -9,18 +9,23 @@ body {
 
 h1, h2, h3 {
     color: #000000;
+    font-family: Arial, sans-serif !important;
+    text-align: center;
 }
 
 h1 {
     font-size: 2em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 h2 {
     font-size: 1.5em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 h3 {
     font-size: 1.3em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 nav ul {
@@ -51,7 +56,7 @@ a:hover {
     color: rgb(204, 39, 110);
 }
 
-.mainText{
+.main-text{
     font-size: 16px; 
     color: #5f5d5b; 
     text-decoration: overline;
@@ -71,19 +76,51 @@ table {
     border-collapse: collapse;
 }
 
-td {
-    border: 1px solid black; 
+td, th {
+    border: 2px solid black; 
     padding: 10px;
     text-align: center; 
-}
-
-td, th {
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
 }
 
 th {
     background-color: #148689;
     color: white;
+}
+
+.bestsellers-table1{
+    background-color: #148689;
+    color: white;
+}
+
+.bestsellers-table2{
+    text-align: center; 
+    background-color: #b3cccd;
+}
+
+.contacts-ul{
+    list-style-type: square;
+}
+
+ul, ol {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #333;
+    margin-left: 20px;
+}
+
+dl {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+dt {
+    font-weight: bold;
+    color: #148689;
+}
+
+dd {
+    margin-left: 20px;
+    color: #555;
 }
