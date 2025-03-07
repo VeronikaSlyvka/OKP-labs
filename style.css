@@ -28,22 +28,27 @@ h3 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-nav ul {
+nav > ul {  /*дочірній селектор */
     list-style: none;
     padding: 0;
     margin: 0;
     text-align: center;
 }
 
-nav ul li {
+nav ul li {         
     display: inline;
     margin-right: 15px;
 }
 
-nav ul li a {
+nav ul li a {    /*контексний селектор */
     text-decoration: none;
     font-size: 18px;
     color: #148689;
+    font-weight: bold;
+}
+
+.main-text a {  /*контексний селектор */
+    color: red;
     font-weight: bold;
 }
 
@@ -97,7 +102,7 @@ th {
     background-color: #b3cccd;
 }
 
-.contacts-ul{
+p + ul{    /*сусідній селектор */
     list-style-type: square;
 }
 
