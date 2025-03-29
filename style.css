@@ -179,3 +179,16 @@ dd {
 .ababalamaga :first-child{
     color:  #93314b;
 }
+
+#phone::after {
+    content: "📞";
+}
+
+.before{
+    list-style: none;
+}
+
+.before li::before{
+    content: "📖 ";
+    font-size: 1.2em; 
+}
