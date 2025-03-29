@@ -67,10 +67,11 @@ nav ul li a {    /*контексний селектор */
 }
 
 a {
+    color: #ef88a4;
     text-decoration: underline;
 }
 
-.main-text a:hover {   /*наведений курсор */
+a:hover {   /*наведений курсор */
     color: rgb(204, 39, 110);
 }
 
@@ -79,7 +80,7 @@ a {
 }
 
 .main-text a:visited {  /*відвідані посилання*/
-    color: rgb(204, 39, 110);
+    color: #117477;
 }
 
 .main-text a:active { /*натиснуте посилання */
@@ -168,4 +169,13 @@ dd {
 
 .float{
     float: right; 
+}
+
+.sale{
+    text-align: center;
+    font-size: 19px;
+}
+
+.ababalamaga :first-child{
+    color:  #93314b;
 }
