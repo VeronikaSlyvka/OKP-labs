@@ -55,3 +55,30 @@ function compareBooks(){
         }
     }  
 }
+
+function changeBackground(){
+    document.body.style.backgroundColor = "rgb(184, 180, 180)";
+    setTimeout( function() {
+        document.body.style.backgroundColor = "rgb(255, 255, 255)";
+    }, 30000);
+}
+
+function changeLocation(){
+    window.location.href = "contacts.html"; 
+}
+
+function newVersion(){
+    let firstString = document.getElementById('first');
+    firstString.outerHTML = '<h2 class="first" id="first">Ласкаво просимо до ОНОВЛЕНОЇ книгарні місіс Пінс!</h2>';
+
+    let facts = document.querySelector('.before');
+    facts.innerHTML ='<li>Перша відома друкована книга — це «Цзеншу» (Китай, 868 рік), яка була надрукована на деревяних дощечках.</li> <li>Біблія є найбільш видаваною книгою в історії, з понад 5 мільярдами примірників, що були надруковані.</li> <li>«Історія грецької літератури» Миколи Кареєва є однією з найдовших книг у світі, що складається з 73 томів.</li>';
+
+    let paragraphs = document.querySelectorAll('.main-text p');
+    paragraphs.forEach((para, index) => {
+    para.textContent = `${index + 1}: ${para.textContent}`;
+    });
+    
+    let textNode = document.getElementById('facts');
+    textNode.firstChild.nodeValue = "🔍 ОНОВЛЕНІ цікаві факти про книги:";     
+}

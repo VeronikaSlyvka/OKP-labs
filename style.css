@@ -241,3 +241,11 @@ dd {
 .nav-button:hover {
     color: rgb(204, 39, 110);
 }
+
+.button-background{
+    font-size: 15px;
+    margin-top: 30px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    text-align: center;
+}

@@ -14,13 +14,13 @@
             <li><a href="index.html">На головну</a></li>
             <li><a href="books.html">Каталог книг</a></li>
             <li><a href="discounts.html">Знижки</a></li>
-            <li><a href="contacts.html">Контакти</a></li>
+            <li><button onclick="changeLocation()" class="nav-button">Контакти</button></li>
             <li><button onclick="information('Сливка', 'Вероніка')" class="nav-button">Про розробника</button></li>
         </ul>
     </nav>
 
 
-    <h1 class="first">Ласкаво просимо до книгарні місіс Пінс!</h1>
+    <h1 class="first" id="first">Ласкаво просимо до книгарні місіс Пінс!</h1>
     <p style="color:#0e6366; text-align: center; font-size: 25px;">Пропонуємо перед покупкою дізнатись декілька <a href="#facts"> фактів про книги</a></p>
     <div class="main-text">
         <p>У нас ви знайдете <span>безліч цікавих книг</span> на будь-який смак.</p>
@@ -95,6 +95,8 @@
             <dd>Відома викладачка швидкочитання, яка розробила техніку покращення навичок читання.</dd>
         </dl>
     </div>
+
+    <button class="button-background" onclick="newVersion()">Натисність сюди, щоб перейти на оновлену версію сторінки</button> 
 
     <script src="./script6.js"></script>
 
