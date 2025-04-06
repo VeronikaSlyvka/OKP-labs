@@ -52,6 +52,7 @@ nav > ul {  /*дочірній селектор */
 nav ul li {         
     display: inline;
     margin-right: 15px;
+    padding-left: 50px;
 }
 
 nav ul li a {    /*контексний селектор */
@@ -128,6 +129,10 @@ th {
     color: white;
 }
 
+table td a{
+    color: #148689;
+}
+
 .bestsellers-table2{
     text-align: center; 
     background-color: #b3cccd;
@@ -191,4 +196,48 @@ dd {
 .before li::before{
     content: "📖 ";
     font-size: 1.2em; 
+}
+
+.book-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.book-button1 {
+    background-color: #ef88a4;
+    color: white;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    margin: 10px;
+    cursor: pointer;
+    margin-right: 70px;
+}
+
+.book-button2 {
+    background-color: #148689;
+    color: white;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    margin: 10px;
+    cursor: pointer;
+    margin-right: 70px;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #148689;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    color: rgb(204, 39, 110);
 }

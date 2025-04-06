@@ -15,6 +15,7 @@
             <li><a href="books.html">Каталог книг</a></li>
             <li><a href="discounts.html">Знижки</a></li>
             <li><a href="contacts.html">Контакти</a></li>
+            <li><button onclick="information('Сливка', 'Вероніка')" class="nav-button">Про розробника</button></li>
         </ul>
     </nav>
 
@@ -47,13 +48,17 @@
 
     </table>
 
-    <button onclick="dialog()">Додати книгу до кошика</button>
-    <button onclick="suggestBook()">Інші книги</button>
+    <div class="book-buttons">
+        <button class="book-button1" onclick="dialog()">Додати книгу до кошика</button>
+        <button class="book-button2" onclick="suggestBook()">Інші книги</button>
+        <button class="book-button1" onclick="compareBooks()">Порівняти назви книг</button>
+    </div>
+    
     
     <script>
         function suggestBook() {
             alert("Не знайшли книжку яку шукали? Можете написати нам назву книги і ми додамо її найближчим часом в каталог!");
-            let answer = confirm("Бажаєте написати назву бажаної книги?");
+            let answer = confirm("Хочете написати назву бажаної книги?");
             if (answer)  {
                 prompt("Напишіть назву книги і за можливості автора.");
             }
