@@ -82,3 +82,32 @@ function newVersion(){
     let textNode = document.getElementById('facts');
     textNode.firstChild.nodeValue = "🔍 ОНОВЛЕНІ цікаві факти про книги:";     
 }
+
+function newBooks(){
+    document.write('<h3>Новий сайт ще знаходиться в процесі розробки. Оновіть цю сторінку, щоб повернутись на теперішній сайт. <p>Перепрошуємо за тимчасові незручності!</p></h3>');
+}
+
+function informationBooks() {
+    let bookButtons = document.querySelector('.book-buttons')
+
+    let info1 = document.createElement('p');
+    info1.innerHTML = "<b>Усі книги, представлені на нашому сайті, охоплюються авторським правом.</b>";
+    bookButtons.prepend(info1);
+
+    let info2 = document.createElement('p');
+    info2.textContent = "Всі права на публікації належать їхнім власникам та авторським колективам, а також ліцензіатам і видавництвам.";
+    bookButtons.after(info2);
+
+    let info3 = document.createTextNode('Це означає, що ми не маємо права на безкоштовне відтворення чи поширення цих матеріалів без відповідного дозволу від власників прав.');
+    document.body.append(info3);
+
+    let catalog = document.getElementById('catalog');
+    let newCatalog = document.createElement('h2');
+    newCatalog.className = 'first'
+    newCatalog.textContent = "ОНОВЛЕНИЙ каталог книг";
+    catalog.replaceWith(newCatalog);
+
+    setTimeout(() => {
+        info1.remove(); 
+    }, 5000);
+}
