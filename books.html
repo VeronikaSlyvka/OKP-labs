@@ -50,22 +50,11 @@
 
     <div class="book-buttons">
         <button class="book-button1" onclick="dialog()">Додати книгу до кошика</button>
-        <button class="book-button2" onclick="suggestBook()">Інші книги</button>
-        <button class="book-button1" onclick="compareBooks()">Порівняти назви книг</button>
-        <button class="book-button2" onclick="informationBooks()">Додаткова інформація</button>
+        <button class="book-button2"  id="otherBooks-button" >Інші книги</button>
+        <button id="compare-books" class="book-button1" >Порівняти назви книг</button>
+        <button class="book-button2" id="info-button">Додаткова інформація</button>
         <button class="book-button1" onclick="newBooks()">Новий сайт</button>
-    </div>
-    
-    
-    <script>
-        function suggestBook() {
-            alert("Не знайшли книжку яку шукали? Можете написати нам назву книги і ми додамо її найближчим часом в каталог!");
-            let answer = confirm("Хочете написати назву бажаної книги?");
-            if (answer)  {
-                prompt("Напишіть назву книги і за можливості автора.");
-            }
-        }
-    </script>    
+    </div>   
 
     <script src="./script6.js"></script>
      

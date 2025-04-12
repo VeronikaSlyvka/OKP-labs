@@ -16,11 +16,22 @@ function dialog(){
     } while(answer)
 }
 
+function suggestBook() {
+    alert("Не знайшли книжку яку шукали? Можете написати нам назву книги і ми додамо її найближчим часом в каталог!");
+    let answer = confirm("Хочете написати назву бажаної книги?");
+    if (answer)  {
+        prompt("Напишіть назву книги і за можливості автора.");
+    }
+}
+
 
 function information(surname, name, position = "засновниця книгарні"){
     alert(`Інформація про розробника: ${surname} ${name}, ${position}`);
 }
 
+
+let compareButton = document.getElementById('compare-books');
+compareButton.onclick = compareBooks;
 
 function compareBooks(){
     let book1, book2;
@@ -111,3 +122,40 @@ function informationBooks() {
         info1.remove(); 
     }, 5000);
 }
+
+function highlightButton(){
+    let button = document.getElementById('info-button');
+    button.style.backgroundColor = 'rgb(127, 152, 153)'
+    setTimeout(() => {
+        button.style.backgroundColor = '#148689';
+    }, 3000)
+}
+
+let infoButton = document.getElementById('info-button');
+infoButton.addEventListener('click', informationBooks);
+infoButton.addEventListener('click', highlightButton);
+
+
+const otherBooksHandler = {
+    handleEvent: function(event){
+        alert('Подія спрацювала на елементі: ' + event.currentTarget);
+        suggestBook();
+
+        event.currentTarget.removeEventListener('click', this);
+    }
+};
+
+let otherButton = document.getElementById('otherBooks-button');
+otherButton.addEventListener('click', otherBooksHandler);
+
+
+// let list = document.querySelector('.before');
+
+// list.addEventListener('click', function(event){
+//     if (event.target.tagName === 'LI')
+//         event.target.style.backgroundColor = 'lightblue';
+
+//     setTimeout(() => {
+//         event.target.style.backgroundColor = '';  
+//     }, 2000);  
+// });
