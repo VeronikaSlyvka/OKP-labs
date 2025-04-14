@@ -1,32 +1,3 @@
-let factsList = document.getElementById('facts-list');
-
-factsList.addEventListener('click', function(event) {
-    let li = event.target.closest('li'); 
-    if (li) {
-        li.style.backgroundColor = 'lightblue';
-        setTimeout(() => {
-            li.style.backgroundColor = '';
-        }, 2000);
-    }
-});
-
-
-let menu = document.getElementById('menu');
-menu.addEventListener('click', function(event){
-    if (event.target.tagName === 'button') {
-        let action = event.target.getAttribute('data-action'); 
-
-        if (action === 'changeLocation') {
-            changeLocation();
-        } else if (action === 'information') {
-            let surname = event.target.getAttribute('data-surname');
-            let name = event.target.getAttribute('data-name');
-            information(surname, name);
-        }
-    }
-});
-
-
 function dialog(){
     let total=0;
     let answer, bookNumber
@@ -93,7 +64,9 @@ function compareBooks(){
     }  
 }
 let compareButton = document.getElementById('compare-books');
-compareButton.onclick = compareBooks;
+if (compareButton) {
+    compareButton.onclick = compareBooks;
+}
 
 
 function changeBackground(){
@@ -161,9 +134,10 @@ function highlightButton(){
 }
 
 let infoButton = document.getElementById('info-button');
-infoButton.addEventListener('click', informationBooks);
-infoButton.addEventListener('click', highlightButton);
-
+if (infoButton) {
+    infoButton.addEventListener('click', informationBooks);
+    infoButton.addEventListener('click', highlightButton);
+}
 
 const otherBooksHandler = {
     handleEvent: function(event){
@@ -175,5 +149,38 @@ const otherBooksHandler = {
 };
 
 let otherButton = document.getElementById('otherBooks-button');
-otherButton.addEventListener('click', otherBooksHandler);
+if (otherButton) {
+    otherButton.addEventListener('click', otherBooksHandler);
+}
 
+
+let factsList = document.getElementById('facts-list');
+
+if (factsList) { 
+    factsList.addEventListener('click', function(event) {
+        let li = event.target.closest('li'); 
+        if (li) {
+            li.style.backgroundColor = 'lightblue';
+            setTimeout(() => {
+                li.style.backgroundColor = '';
+            }, 2000);
+        }
+    });
+}
+
+let menu = document.getElementById('menu');
+if (menu) {
+    menu.addEventListener('click', function(event){
+        if (event.target.tagName === 'BUTTON') {
+            let action = event.target.getAttribute('data-action'); 
+
+            if (action === 'changeLocation') {
+                changeLocation();
+            } else if (action === 'information') {
+                let surname = event.target.getAttribute('data-surname');
+                let name = event.target.getAttribute('data-name');
+                information(surname, name);
+            }
+        }
+    });
+}
