@@ -193,6 +193,11 @@ dd {
     list-style: none;
 }
 
+.before li {
+    cursor: pointer;
+}
+
+
 .before li::before{
     content: "📖 ";
     font-size: 1.2em; 

@@ -10,12 +10,12 @@
 
 <body>
     <nav>
-        <ul>
+        <ul id="menu">
             <li><a href="index.html">На головну</a></li>
             <li><a href="books.html">Каталог книг</a></li>
             <li><a href="discounts.html">Знижки</a></li>
-            <li><button onclick="changeLocation()" class="nav-button">Контакти</button></li>
-            <li><button onclick="information('Сливка', 'Вероніка')" class="nav-button">Про розробника</button></li>
+            <li><button data-action="changeLocation" class="nav-button">Контакти</button></li>
+            <li><button data-action="information" data-surname="Сливка" data-name="Вероніка" class="nav-button">Про розробника</button></li>
         </ul>
     </nav>
 

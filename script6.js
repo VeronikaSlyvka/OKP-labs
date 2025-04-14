@@ -1,3 +1,32 @@
+let factsList = document.getElementById('facts-list');
+
+factsList.addEventListener('click', function(event) {
+    let li = event.target.closest('li'); 
+    if (li) {
+        li.style.backgroundColor = 'lightblue';
+        setTimeout(() => {
+            li.style.backgroundColor = '';
+        }, 2000);
+    }
+});
+
+
+let menu = document.getElementById('menu');
+menu.addEventListener('click', function(event){
+    if (event.target.tagName === 'button') {
+        let action = event.target.getAttribute('data-action'); 
+
+        if (action === 'changeLocation') {
+            changeLocation();
+        } else if (action === 'information') {
+            let surname = event.target.getAttribute('data-surname');
+            let name = event.target.getAttribute('data-name');
+            information(surname, name);
+        }
+    }
+});
+
+
 function dialog(){
     let total=0;
     let answer, bookNumber
@@ -29,9 +58,6 @@ function information(surname, name, position = "засновниця книга�
     alert(`Інформація про розробника: ${surname} ${name}, ${position}`);
 }
 
-
-let compareButton = document.getElementById('compare-books');
-compareButton.onclick = compareBooks;
 
 function compareBooks(){
     let book1, book2;
@@ -66,6 +92,9 @@ function compareBooks(){
         }
     }  
 }
+let compareButton = document.getElementById('compare-books');
+compareButton.onclick = compareBooks;
+
 
 function changeBackground(){
     document.body.style.backgroundColor = "rgb(184, 180, 180)";
@@ -114,7 +143,7 @@ function informationBooks() {
 
     let catalog = document.getElementById('catalog');
     let newCatalog = document.createElement('h2');
-    newCatalog.className = 'first'
+    newCatalog.className = 'first';
     newCatalog.textContent = "ОНОВЛЕНИЙ каталог книг";
     catalog.replaceWith(newCatalog);
 
@@ -148,14 +177,3 @@ const otherBooksHandler = {
 let otherButton = document.getElementById('otherBooks-button');
 otherButton.addEventListener('click', otherBooksHandler);
 
-
-// let list = document.querySelector('.before');
-
-// list.addEventListener('click', function(event){
-//     if (event.target.tagName === 'LI')
-//         event.target.style.backgroundColor = 'lightblue';
-
-//     setTimeout(() => {
-//         event.target.style.backgroundColor = '';  
-//     }, 2000);  
-// });
