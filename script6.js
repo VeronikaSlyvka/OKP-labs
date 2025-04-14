@@ -25,10 +25,10 @@ function suggestBook() {
 }
 
 
-function information(surname, name, position = "засновниця книгарні"){
-    alert(`Інформація про розробника: ${surname} ${name}, ${position}`);
+let compareButton = document.getElementById('compare-books');
+if (compareButton) {
+    compareButton.onclick = compareBooks;
 }
-
 
 function compareBooks(){
     let book1, book2;
@@ -63,10 +63,6 @@ function compareBooks(){
         }
     }  
 }
-let compareButton = document.getElementById('compare-books');
-if (compareButton) {
-    compareButton.onclick = compareBooks;
-}
 
 
 function changeBackground(){
@@ -74,10 +70,6 @@ function changeBackground(){
     setTimeout( function() {
         document.body.style.backgroundColor = "rgb(255, 255, 255)";
     }, 30000);
-}
-
-function changeLocation(){
-    window.location.href = "contacts.html"; 
 }
 
 function newVersion(){
@@ -166,6 +158,15 @@ if (factsList) {
             }, 2000);
         }
     });
+}
+
+
+function changeLocation(){
+    window.location.href = "contacts.html"; 
+}
+
+function information(surname, name, position = "засновниця книгарні"){
+    alert(`Інформація про розробника: ${surname} ${name}, ${position}`);
 }
 
 let menu = document.getElementById('menu');
