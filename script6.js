@@ -185,3 +185,52 @@ if (menu) {
         }
     });
 }
+
+
+let bookTable = document.getElementById('booktable');
+
+if (bookTable) {
+    bookTable.addEventListener('mouseover', function(event) {
+        let td = event.target.closest('td');
+        if (td && bookTable.contains(td)) {
+            td.style.backgroundColor = 'lightblue';
+        }
+    });
+
+    bookTable.addEventListener('mouseout', function(event) {
+        let td = event.target.closest('td');
+        if (td && bookTable.contains(td)) {
+            if (!td.contains(event.relatedTarget)) {
+                td.style.backgroundColor = '';
+            }
+        }
+    });
+}
+
+
+const saleImg = document.querySelector('.saleimg');
+let offsetX, offsetY; 
+let isDragging = false;
+
+saleImg.addEventListener('mousedown', function (e) {
+    isDragging = true;
+
+    offsetX = e.clientX - saleImg.getBoundingClientRect().left;
+    offsetY = e.clientY - saleImg.getBoundingClientRect().top;
+
+    saleImg.style.cursor = 'grabbing';
+});
+
+document.addEventListener('mousemove', function (e) {
+    if (isDragging) {
+        saleImg.style.left = (e.clientX - offsetX) + 'px';
+        saleImg.style.top = (e.clientY - offsetY) + 'px';
+    }
+});
+
+document.addEventListener('mouseup', function () {
+    if (isDragging) {
+        isDragging = false;
+        saleImg.style.cursor = 'grab';
+    }
+});

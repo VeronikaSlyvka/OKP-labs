@@ -254,3 +254,12 @@ dd {
     cursor: pointer;
     text-align: center;
 }
+
+.saleimg {
+    position: absolute; 
+    left: 100px;
+    top: 500px;
+    cursor: grab;
+    z-index: 1000;
+    height: 100px;
+}
